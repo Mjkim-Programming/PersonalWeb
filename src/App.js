@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 
 import CustomHeader from './header/header-cus';
 import MainPage from './mainpage/mainPage';
+import NotFound from './404page/404page';
 
 function App() {
   return (
@@ -16,7 +17,7 @@ function App() {
           <Route path="/test" element={<h1>테스트</h1>}/>
 
           {/*//^ 예외처리(존재하지 않는 페이지) */}
-          <Route path="*" element={<h1>404 Not Found</h1>}/>
+          <Route path="*" element={<NotFound/>}/>
         </Routes>
       </BrowserRouter>
     </div>
